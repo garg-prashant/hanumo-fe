@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { usePrivy } from '@privy-io/react-auth';
 import Header from '@/components/Header';
+import StarBackground from '@/components/StarBackground';
 import UserDashboard from '@/components/UserDashboard';
 
 export default function Dashboard() {
@@ -23,9 +24,10 @@ export default function Dashboard() {
   }, [authenticated, user]);
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
+    <div className="min-h-screen text-white relative overflow-x-hidden">
+      <StarBackground intensity="low" />
       <Header />
-      <div className="pt-20">
+      <div className="pt-20 relative z-10">
         <UserDashboard />
       </div>
     </div>

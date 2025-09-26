@@ -5,6 +5,7 @@ import { useAccount } from 'wagmi';
 import { formatPrice, formatDate } from '@/lib/utils';
 import { Calendar, User, DollarSign, Clock, CheckCircle, XCircle } from 'lucide-react';
 import Header from '@/components/Header';
+import StarBackground from '@/components/StarBackground';
 
 interface RentalHistory {
   id: string;
@@ -83,7 +84,8 @@ export default function MyRentals() {
 
   if (!isConnected) {
     return (
-      <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
+      <div className="min-h-screen text-white relative overflow-x-hidden">
+        <StarBackground intensity="low" />
         <Header />
         <div className="flex items-center justify-center min-h-screen pt-20">
           <div className="glass-dark rounded-lg p-8 max-w-md mx-4">
@@ -104,9 +106,10 @@ export default function MyRentals() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
+    <div className="min-h-screen text-white relative overflow-x-hidden">
+      <StarBackground intensity="low" />
       <Header />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pt-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pt-24 relative z-10">
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-white mb-2">My Rentals</h1>

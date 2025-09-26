@@ -20,12 +20,12 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  background: #000000;
+  background: transparent;
   color: #fff;
 }
 
 body {
-  background: #000000;
+  background: transparent;
   min-height: 100vh;
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   overflow-x: hidden;

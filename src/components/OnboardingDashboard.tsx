@@ -20,6 +20,7 @@ import {
   Database
 } from 'lucide-react';
 import { AuthService } from '@/lib/auth';
+import StarBackground from '@/components/StarBackground';
 
 interface UserProfile {
   displayName: string;
@@ -139,7 +140,8 @@ export default function OnboardingDashboard() {
 
   if (!authenticated) {
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center">
+        <StarBackground intensity="low" />
         <div className="glass-dark rounded-2xl p-8 max-w-md mx-4 text-center">
           <Shield className="h-12 w-12 text-blue-400 mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-white mb-4">Authentication Required</h2>
@@ -151,7 +153,8 @@ export default function OnboardingDashboard() {
 
   if (isComplete) {
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center">
+        <StarBackground intensity="low" />
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -184,8 +187,9 @@ export default function OnboardingDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-black">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="min-h-screen">
+      <StarBackground intensity="medium" />
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}

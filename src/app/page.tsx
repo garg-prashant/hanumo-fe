@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePrivy } from '@privy-io/react-auth';
 import Header from '@/components/Header';
+import StarBackground from '@/components/StarBackground';
 import SearchFilters, { SearchFilters as SearchFiltersType } from '@/components/SearchFilters';
 import PropertyCard from '@/components/PropertyCard';
 import RentalModal from '@/components/RentalModal';
@@ -204,10 +205,11 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
+    <div className="min-h-screen text-white relative overflow-x-hidden">
+      <StarBackground intensity="high" />
       <Header />
       
-      <main className="w-full">
+      <main className="w-full relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24">
         {/* Hero Section */}
         <motion.div 
